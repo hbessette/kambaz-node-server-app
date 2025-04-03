@@ -1,4 +1,5 @@
 {
+  "type": "module",
   "name": "kambaz-node-server-app",
   "version": "1.0.0",
   "description": "",
@@ -15,5 +16,13 @@
   "bugs": {
     "url": "https://github.com/hbessette/kambaz-node-server-app/issues"
   },
-  "homepage": "https://github.com/hbessette/kambaz-node-server-app#readme"
+  "homepage": "https://github.com/hbessette/kambaz-node-server-app#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^5.1.0",
+    "express-session": "^1.18.1",
+    "uuid": "^11.1.0"
+  },
+  "start": "node index.js"
 }
