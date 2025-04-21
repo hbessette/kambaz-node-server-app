@@ -1,12 +1,12 @@
 import mongoose from "mongoose";
 import model from "./model.js"
 const MultipleChoiceSchema = new mongoose.Schema({
-  choices: [{ type: String }],
+  choices: [String],
   correctAnswer: String,
 });
 
 const MultipleChoiceQuestion = model.discriminator(
-  "multipleChoice",
+  "Multiple Choice",
   MultipleChoiceSchema
 );
 
@@ -15,16 +15,16 @@ const TrueFalseSchema = new mongoose.Schema({
 })
 
 const TrueFalseQuestion = model.discriminator(
-    "trueFalse",
+    "True/False",
     TrueFalseSchema
 )
 
 const FillInBlankSchema = new mongoose.Schema({
-    correctAnswers: [{ type: String }]
+    correctAnswers: [String]
 })
 
 const FillInBlankQuestion = model.discriminator(
-    "fillInBlank",
+    "Fill in the Blank",
     FillInBlankSchema
 )
 

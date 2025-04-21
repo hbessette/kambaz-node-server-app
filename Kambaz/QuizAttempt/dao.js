@@ -1,10 +1,10 @@
 import model from "./model.js";
 import { v4 as uuidv4 } from "uuid";
-export function findQuizAttemptsForUser(userId) {
-  return model.find({ user: userId });
+export function findQuizAttemptsForUserAndQuiz(userId, quizId) {
+  return model.find({ user: userId, quiz: quizId});
 }
-export function createQuizAttempt(quizAttempt) {
-  const newQuizAttempt = { ...quizAttempt, _id: uuidv4() };
+export function createQuizAttempt(user, quiz, quizAttempt) {
+  const newQuizAttempt = { ...quizAttempt, user: user, quiz: quiz,  _id: uuidv4() };
   return model.create(newQuizAttempt);
 }
 export function deleteQuizAttempt(quizAttemptId) {
