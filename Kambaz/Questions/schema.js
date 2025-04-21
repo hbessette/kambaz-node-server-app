@@ -9,7 +9,7 @@ const schema = new mongoose.Schema(
     quiz: { type: String, ref: "QuizzesModel" },
     choices: [String],
     correctAnswer: String,
-    answers: mongoose.Schema.Types.Mixed
+    correctAnswers: [String]
   },
   { collection: "questions" }
 );
